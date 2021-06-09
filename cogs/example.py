@@ -20,7 +20,7 @@ class Example(commands.Cog):
     
     @commands.command(aliases=('num'))
     async def test(self, ctx):
-        await ctx.send(f"The number is {num}")
+        await ctx.send(f"The number is {number}")
         number += 1
 
 def setup(bot):
