@@ -16,7 +16,11 @@ class Example(commands.Cog):
         """
         The main command which handles the code execution process.
         """
-        await ctx.send(f"The number entered {number}")
+        await ctx.send(f"The number entered {num}")
+    
+    @commands.command(aliases=('num'))
+    async def test(self, ctx):
+        await ctx.send(f"The number is {num}")
         number += 1
 
 def setup(bot):
