@@ -9,6 +9,7 @@ class Example(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot
+        num = 0
 
     @commands.command(aliases=('num?',))
     async def test(self, ctx, num: int):
@@ -16,6 +17,7 @@ class Example(commands.Cog):
         The main command which handles the code execution process.
         """
         await ctx.send(f"The number entered {num}")
+        num += 1
 
 def setup(bot):
     bot.add_cog(Example(bot))
